@@ -20,9 +20,10 @@ A Discord bot that monitors hard drive health via Prometheus and the smartctl ex
 uv sync
 ```
 
-Set your Prometheus URL and Discord bot token in `main.py`, then run:
+Set the required environment variables, then run:
 
 ```
+export DISCORD_TOKEN=your-bot-token
 uv run main.py
 ```
 
