@@ -1,0 +1,11 @@
+[project]
+name = "hddonfire"
+version = "0.1.0"
+description = "Discord bot that queries Prometheus and reports hard drive statistics"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "discord-py>=2.6.4",
+    "httpx>=0.28.1",
+    "ruff>=0.15.0",
+]
