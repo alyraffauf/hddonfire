@@ -86,7 +86,7 @@ async def on_message(message):
             for device, metrics in devices.items():
                 for metric, value in metrics.items():
                     if metric == "smartctl_device_temperature":
-                        if int(value) > 30:
+                        if int(value) > 40:
                             await message.channel.send(
                                 f"omg {host}:{device} is hot ({value} degrees)!!!!"
                             )

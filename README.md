@@ -1,11 +1,17 @@
 # hddonfire
 
-A Discord bot that monitors hard drive health via Prometheus and the smartctl exporter. It queries SMART metrics and alerts when drives are running hot or reporting failures.
+A Discord bot that monitors hard drive health via Prometheus and the smartctl exporter. It polls SMART metrics every minute and alerts in a Discord channel when drives are running hot or reporting failures.
+
+## Features
+
+- Polls Prometheus every minute for SMART metrics
+- Alerts when drive temperature exceeds 40C
+- Alerts when a drive's SMART status indicates failure
 
 ## Commands
 
-- `$hddstatus` - Checks all monitored hosts and reports:
-  - Drives with temperatures above 30C
+- `$hddstatus` - On-demand check of all monitored hosts, reports:
+  - Drives with temperatures above 40C
   - Drives with a failing SMART status
 
 ## Requirements
@@ -24,6 +30,7 @@ Set the required environment variables, then run:
 
 ```
 export DISCORD_TOKEN=your-bot-token
+export CHANNEL_ID=your-channel-id
 uv run main.py
 ```
 
